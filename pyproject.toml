@@ -1,0 +1,14 @@
+[project]
+name = "tds-solver"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.11",
+    "ipykernel>=6.29.5",
+    "openai>=1.65.3",
+    "python-multipart>=0.0.20",
+    "sentence-transformers>=3.4.1",
+    "uvicorn>=0.34.0",
+]
