@@ -6,6 +6,7 @@ from openai import OpenAI
 
 import os
 
+import chromadb
 import submissions as sub
 
 app = FastAPI()
@@ -23,6 +24,9 @@ DATA_PATH = "./data/"
 URL = "https://llmfoundry.straive.com/openai/v1/"
 KEY = os.environ["AIPROXY_TOKEN"]
 
+FUNCTIONS_DB = chromadb.PersistentClient(path="chromadb")
+FUNC_COLLECTION = FUNCTIONS_DB.get_or_create_collection(name="functions")
+
 client = OpenAI(
     base_url = URL,
     api_key = KEY
@@ -30,11 +34,10 @@ client = OpenAI(
 
 @app.post("/api/", status_code=status.HTTP_200_OK)
 async def run(question: str = Form(...), file: UploadFile = File(...)):
-    """
-    Answer any graded assignment question and returns the result/answer for said question.
+    """ Answer any graded assignment question and returns the result/answer for said question.
     
     Args:
-        quesiton (str): The question of the user.
+        question (str): The question of the user.
         file (file): The file the user is requesting to be downloaded/used.
         
     Returns:
