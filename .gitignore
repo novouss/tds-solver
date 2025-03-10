@@ -11,5 +11,6 @@ wheels/
 .env
 
 # Project based files
+data/
 ignorefolder/
 test.py
