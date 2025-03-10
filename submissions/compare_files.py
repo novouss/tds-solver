@@ -1,6 +1,6 @@
     
 def compare_files(path1: str, path2: str) -> int:
-    """ Compare two files line by line and count the number of differing lines.
+    """ Compare two files line by line and counts the number of differing lines.
 
     Args:
         path1 (str): The file path of the first file to compare.

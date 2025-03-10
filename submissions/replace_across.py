@@ -1,8 +1,8 @@
+import os
+import re
+import hashlib
 
 def replace_across(dirpath: str, replace_from: str, replace_to: str) -> str:
-    import os
-    import re
-    import hashlib
     """ Replace occurrences of a specified string in all files within a given directory and return the SHA-256 checksum of the modified files.
 
     Args:

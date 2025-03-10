@@ -1,10 +1,10 @@
 
+from dateutil.parser import parse
 
 def counting_days(days: str, datepath: str) -> int:
-    from dateutil.parser import parse
     """ Counts the number of occurrences of a specific day of the week in a list of dates provided in the datepath.
     
-    Parameters:
+    Args:
         days (str): The day of the week. The string can also end with "day" or "days" (e.g., "Monday", "Mondays", "mon").
         datepath (str): The file path containing the list of dates.
         
