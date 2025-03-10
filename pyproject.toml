@@ -11,8 +11,10 @@ dependencies = [
     "ipykernel>=6.29.5",
     "ollama>=0.4.7",
     "openai>=1.65.3",
+    "pandas>=2.2.3",
     "python-dotenv>=1.0.1",
     "python-multipart>=0.0.20",
     "scipy>=1.15.2",
     "uvicorn>=0.34.0",
+    "yt-dlp>=2025.2.19",
 ]
