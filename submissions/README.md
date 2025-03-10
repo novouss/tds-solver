@@ -11,32 +11,32 @@ This section focuses on each task for each graded assignment and their associate
 
 - Graded Assignment 1
   - [VS Code Version](./vscode_info.py) 
-  - [Make HTTP Requests with uv](./uv_requests.py)
+  - [Make HTTP Requests with uv](./uv_requests.py) 
   - [Run command with npx](./npx_prettier.py) ⚠️
   - [Use Google Sheets](./google_sheets.py) 💣
-  - [Use Excel](../submission/excel.py) 💣
-  - [Use DevTools](../submission/chrome_devtools.py) 💣
-  - [Count Wednesdays](./counting_days.py)
+  - [Use Excel](./excel.py) 💣
+  - [Use DevTools](./chrome_devtools.py) 💣
+  - [Count Wednesdays](./counting_days.py) 
   - [Extract CSV from a ZIP](./zipfile_extract.py)
-  - [Use JSON](./sorting_students.py)
+  - [Use JSON](./sort_json_values.py)
   - [Multi-cursor edits](./json_cleanup.py)
   - [CSS Selectors](./css_selectors.py)
   - [Process files with different encoding](./process_encoding.py)
   - [Use GitHub](./github_email.py) ⚠️
   - [Replace across files](./replace_across.py) 
-  - [List files and attributes](./sort_attributes.py)
+  - [List files and attributes](./sort_filter_file_attributes.py)
   - [Move and rename files](./move_rename.py)
   - [Compare files](./compare_files.py) 
-  - [SQL: Ticket Sales](./ticket_sales.py)
+  - [SQL: Ticket Sales](./ticket_sales.py) 
 - Graded Assignment 2
-  - [Write documentation in Markdown](./create_markdown.py)
-  - [Compress an image](./compress_image.py)
+  - [Write documentation in Markdown](./create_markdown.py) 
+  - [Compress an image](./compress_image.py) 
   - [Use an Image Library in Google Colab](./image_colab.py) 💣
   - [Deploy a Python API to Vercel](./vercel_api.py) ⚠️
   - [Create a GitHub Action](./github_action.py) ⚠️
   - [Push an image to Docker Hub](./docker_hub.py) 💣
-  - [Write a FastAPI server to serve data](./fastapi_server) 
-  - [Run a local LLM with Llamafile and ngrok](./local_lllm) ⚠️
+  - [Write a FastAPI server to serve data](./fastapi_server.py) 
+  - [Run a local LLM with Llamafile and ngrok](./local_llm.py) ⚠️
 - Graded Assignment 3
   - [LLM Sentiment Analysis](./sentiment_analysis.py)
   - [LLM Token Costs](./token_costs.py)
@@ -66,5 +66,5 @@ This section focuses on each task for each graded assignment and their associate
   - [Parsing JSON](./parse_json.py)
   - [Extract nested JSON keys](./extract_keys.py)
   - [DuckDB: Social Media Interactions](./duckdb_interactions.py) ⚠️
-  - [Transcribe a Youtube video](./yt_transcribe.py) ⚠️
+  - [Transcribe a Youtube video](./yt_transcribe.py) 
   - [Reconstruct an image](./jigsaw_image.py) ⚠️
