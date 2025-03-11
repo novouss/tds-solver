@@ -7,7 +7,7 @@ from openai import OpenAI
 import os
 
 import chromadb
-import submissions as sub
+from submissions import tasks
 
 app = FastAPI()
 
@@ -49,7 +49,7 @@ async def run(question: str = Form(...), file: UploadFile = File(...)):
         f.write(await file.read())
     
     if file.filename.endswith(".zip"):
-        files = sub.zipfile_extract(filepath, DATA_PATH)
+        files = tasks["zipfile_extract"](filepath, DATA_PATH)
 
     # respones = client.chat.completions.create(
     #     model = "gpt-4o-mini",
