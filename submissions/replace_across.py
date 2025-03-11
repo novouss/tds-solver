@@ -1,6 +1,3 @@
-import os
-import re
-import hashlib
 
 def replace_across(dirpath: str, replace_from: str, replace_to: str) -> str:
     """ Replace occurrences of a specified string in all files within a given directory and return the SHA-256 checksum of the modified files.
@@ -20,6 +17,10 @@ def replace_across(dirpath: str, replace_from: str, replace_to: str) -> str:
         >>> replace_across_files("./data/", "IITM", "IIT Madras")
         f200c727b66d4190e015287a406619efb385517c62ee3c1eeb1b41c4ad5cc5e5  -
     """
+    import os
+    import re
+    import hashlib
+    
     sha256sum = hashlib.sha256()
     pattern = re.compile(replace_from, re.IGNORECASE)
     

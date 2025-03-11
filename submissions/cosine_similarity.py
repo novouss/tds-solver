@@ -1,9 +1,4 @@
 
-# import chromadb
-import numpy as np
-from submissions.llm_embeddings import llm_embeddings
-from scipy.spatial import distance
-
 def cosine_similarity(text: str, collection):
     """ Finds the most similar document in a collection to the given text using cosine similarity.
 
@@ -19,6 +14,10 @@ def cosine_similarity(text: str, collection):
         >>> cosine_similarity(collection, "Find me the most relevant document.")
         "This is the most relevant document in the collection."
     """
+    import numpy as np
+    from submissions.llm_embeddings import llm_embeddings
+    from scipy.spatial import distance
+
     query_embedding = llm_embeddings(text)
     results = collection.query(
         query_embeddings = [query_embedding],

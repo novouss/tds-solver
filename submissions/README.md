@@ -54,7 +54,7 @@ This section focuses on each task for each graded assignment and their associate
   - [Scrape the BBC Weather API](./bbc_weather.py)
   - [Find the bounding box of a city](./bounding_box.py)
   - [Search Hacker News](./hacker_news.py)
-  - [Find newest GitHub User](./newest_user.py)
+  - [Find newest GitHub User](./newest_github_user.py)
   - [Scheduled GitHub Action](./github_actions.py)
   - [Extract tables from PDF](./extract_tables.py)
   - [Convert PDF to Markdown](./pdf_to_markdown.py)

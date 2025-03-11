@@ -1,18 +1,4 @@
 
-import os
-import json
-import yt_dlp
-import pandas as pd
-from openai import OpenAI
-
-URL = "https://llmfoundry.straive.com/openai/v1/"
-KEY = os.environ["AIPROXY_TOKEN"]
-
-client = OpenAI(
-    base_url=URL,
-    api_key=KEY
-)
-
 def yt_transcribe(url: str) -> str:
     """ Transcribes a YouTube video using the provided URL.
 
@@ -26,6 +12,20 @@ def yt_transcribe(url: str) -> str:
         >>> yt_transcribe("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         152
     """
+    import os
+    import json
+    import yt_dlp
+    import pandas as pd
+    from openai import OpenAI
+
+    URL = "https://llmfoundry.straive.com/openai/v1/"
+    KEY = os.environ["AIPROXY_TOKEN"]
+
+    client = OpenAI(
+        base_url=URL,
+        api_key=KEY
+    )
+
     def clean_transcripts(df_export: pd.DataFrame) -> list[str]:
         export = df_export.to_string(index=False)
         export = export.split("\n")

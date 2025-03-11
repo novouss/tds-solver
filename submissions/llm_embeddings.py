@@ -1,5 +1,4 @@
-import os
-import httpx
+
 from typing import List
 
 def llm_embeddings(text: str) -> List[float]:
@@ -15,6 +14,9 @@ def llm_embeddings(text: str) -> List[float]:
         >>> llm_embeddings("Hello, world!")
         [0.123, -0.456, 0.789, ...]
     """
+    import os
+    import httpx
+
     url = "https://llmfoundry.straive.com/openai/v1/embeddings"
     key = os.environ["AIPROXY_TOKEN"]
     headers = {

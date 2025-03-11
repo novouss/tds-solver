@@ -1,6 +1,4 @@
 
-import json 
-import pandas as pd
 
 def sort_json_values(students: str) -> str:
     """ Sorts a json object of students based on age and name, then returns the sorted data.
@@ -18,6 +16,9 @@ def sort_json_values(students: str) -> str:
         >>> sort_json_values('{"name": "John", "age": 20}, {"name": "Alice", "age": 18}')
         '{"name": "Alice","age": 18}, {"name": "John","age": 20}'
     """
+    import json 
+    import pandas as pd
+    
     json_object = json.loads(students)
     df = pd.DataFrame(json_object)
     df = df.sort_values(['age', 'name'])

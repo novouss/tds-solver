@@ -1,6 +1,4 @@
 
-from dateutil.parser import parse
-
 def counting_days(days: str, datepath: str) -> int:
     """ Counts the number of occurrences of a specific day of the week in a list of dates provided in the datepath.
     
@@ -15,6 +13,7 @@ def counting_days(days: str, datepath: str) -> int:
         >>> counting_days("WEDNESDAYS", "dates.txt")
         38
     """
+    from dateutil.parser import parse
     
     with open(datepath, "r") as file:
         dates = file.readlines()

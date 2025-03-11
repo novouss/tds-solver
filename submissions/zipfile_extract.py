@@ -1,5 +1,4 @@
 
-import zipfile
 from typing import List
 
 def zipfile_extract(zippath: str, extractpath: str) -> List[str]:
@@ -20,6 +19,8 @@ def zipfile_extract(zippath: str, extractpath: str) -> List[str]:
         a.txt
         b.txt
     """
+    import zipfile
+
     try:
         with zipfile.ZipFile(zippath, "r") as f:
             f.extractall(extractpath)
