@@ -15,7 +15,7 @@ def cosine_similarity(text: str, collection) -> str:
         "This is the most relevant document in the collection."
     """
     import numpy as np
-    from submissions.llm_embeddings import llm_embeddings
+    from submissions import llm_embeddings
     from scipy.spatial import distance
 
     query_embedding = llm_embeddings(text)

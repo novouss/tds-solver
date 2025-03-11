@@ -1,5 +1,4 @@
 
-
 def pdf_to_markdown(path: str) -> str:
     """ Converts a PDF to Markdown format.
 

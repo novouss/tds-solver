@@ -2,11 +2,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, UploadFile, status 
 from fastapi.responses import JSONResponse
 from fastapi import Form, File
-from openai import OpenAI
-
-import os
 
 import chromadb
+from openai_auth import client
 from submissions import tasks
 
 app = FastAPI()
@@ -21,16 +19,8 @@ app.add_middleware(
 
 DATA_PATH = "./data/"
 
-URL = "https://llmfoundry.straive.com/openai/v1/"
-KEY = os.environ["AIPROXY_TOKEN"]
-
 FUNCTIONS_DB = chromadb.PersistentClient(path="chromadb")
 FUNC_COLLECTION = FUNCTIONS_DB.get_or_create_collection(name="functions")
-
-client = OpenAI(
-    base_url = URL,
-    api_key = KEY
-)
 
 @app.post("/api/", status_code=status.HTTP_200_OK)
 async def run(question: str = Form(...), file: UploadFile = File(...)):
@@ -51,7 +41,7 @@ async def run(question: str = Form(...), file: UploadFile = File(...)):
     if file.filename.endswith(".zip"):
         files = tasks["zipfile_extract"](filepath, DATA_PATH)
 
-    # respones = client.chat.completions.create(
+    # response = client.chat.completions.create(
     #     model = "gpt-4o-mini",
     #     messages = [{
     #         "role": "system",

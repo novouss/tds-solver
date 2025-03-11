@@ -1,5 +1,4 @@
 
-
 def sort_json_values(students: str) -> str:
     """ Sorts a json object of students based on age and name, then returns the sorted data.
 
