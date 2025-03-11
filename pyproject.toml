@@ -12,6 +12,7 @@ dependencies = [
     "ollama>=0.4.7",
     "openai>=1.65.3",
     "pandas>=2.2.3",
+    "pydf>=12",
     "python-dotenv>=1.0.1",
     "python-multipart>=0.0.20",
     "scipy>=1.15.2",

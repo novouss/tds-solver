@@ -1361,6 +1361,12 @@ wheels = [
 ]
 
 [[package]]
+name = "pydf"
+version = "12"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c7/27/8174d7338be329ea3aabb185a3a19860ea97b8e223b78b21511df529e0fe/pydf-12.tar.gz", hash = "sha256:7f47a7c3abfceb1ac04fc009ded538df1ae449c31203962a1471a4eb3bf21439", size = 13537 }
+
+[[package]]
 name = "pygments"
 version = "2.19.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1683,6 +1689,7 @@ dependencies = [
     { name = "ollama" },
     { name = "openai" },
     { name = "pandas" },
+    { name = "pydf" },
     { name = "python-dotenv" },
     { name = "python-multipart" },
     { name = "scipy" },
@@ -1699,6 +1706,7 @@ requires-dist = [
     { name = "ollama", specifier = ">=0.4.7" },
     { name = "openai", specifier = ">=1.65.3" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "pydf", specifier = ">=12" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "python-multipart", specifier = ">=0.0.20" },
     { name = "scipy", specifier = ">=1.15.2" },
