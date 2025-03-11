@@ -1,5 +1,5 @@
     
-def compare_files(path1: str, path2: str) -> int:
+def compare_files(path1: str, path2: str) -> str:
     """ Compare two files line by line and counts the number of differing lines.
 
     Args:
@@ -7,7 +7,7 @@ def compare_files(path1: str, path2: str) -> int:
         path2 (str): The file path of the second file to compare.
     
     Returns:
-        int: The number of lines that differ between the two files.
+        str: The number of lines that differ between the two files.
     
     Raises:
         FileNotFoundError: If the specified directory does not exist.
@@ -28,4 +28,4 @@ def compare_files(path1: str, path2: str) -> int:
     for f1, f2 in zip(file1, file2):
         difference = difference if f1 == f2 else difference + 1
     
-    return difference
+    return str(difference)

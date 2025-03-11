@@ -16,8 +16,7 @@ def zipfile_extract(zippath: str, extractpath: str) -> List[str]:
 
     Example:
         >>> zipfile_extract("extract.zip", "./data/")
-        a.txt
-        b.txt
+        [a.txt, b.txt]
     """
     import zipfile
 
@@ -28,5 +27,5 @@ def zipfile_extract(zippath: str, extractpath: str) -> List[str]:
     except FileNotFoundError as fnfe:
         raise FileNotFoundError(fnfe)
     
-    return files
+    return str(files)
         

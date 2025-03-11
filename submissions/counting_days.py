@@ -1,5 +1,5 @@
 
-def counting_days(days: str, datepath: str) -> int:
+def counting_days(days: str, datepath: str) -> str:
     """ Counts the number of occurrences of a specific day of the week in a list of dates provided in the datepath.
     
     Args:
@@ -7,7 +7,7 @@ def counting_days(days: str, datepath: str) -> int:
         datepath (str): The file path containing the list of dates.
         
     Returns:
-        int: The count of how many times the day of the week appeared in the provided list of dates.
+        str: The count of how many times the day of the week appeared in the provided list of dates.
     
     Example:
         >>> counting_days("WEDNESDAYS", "dates.txt")
@@ -45,4 +45,4 @@ def counting_days(days: str, datepath: str) -> int:
                 count_days += 1
         except ValueError:
             continue
-    return count_days
+    return str(count_days)

@@ -1,5 +1,5 @@
 
-def newest_github_user(**kwargs):
+def newest_github_user(**kwargs) -> str:
     """ Get the creation date of the newest GitHub user.
 
     Args:

@@ -1,14 +1,12 @@
 
-from typing import List
-
-def llm_embeddings(text: str) -> List[float]:
+def llm_embeddings(text: str) -> str:
     """ Generates embeddings for the given text.
 
     Args:
         text (str): The input text for which embeddings are to be generated.
 
     Returns:
-        list: A list of floating-point numbers representing the embedding of the input text.
+        str: A list of floating-point numbers representing the embedding of the input text.
 
     Example:
         >>> llm_embeddings("Hello, world!")
@@ -28,4 +26,5 @@ def llm_embeddings(text: str) -> List[float]:
         "input": text,
     }
     response = httpx.post(url, headers=headers, json=data)
-    return response.json()["data"][0]["embedding"]
+    embeddings = response.json()["data"][0]["embedding"]
+    return str(embeddings)

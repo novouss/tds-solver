@@ -1,5 +1,5 @@
 
-def cosine_similarity(text: str, collection):
+def cosine_similarity(text: str, collection) -> str:
     """ Finds the most similar document in a collection to the given text using cosine similarity.
 
     Args:
