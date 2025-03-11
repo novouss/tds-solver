@@ -12,19 +12,10 @@ def llm_embeddings(text: str) -> str:
         >>> llm_embeddings("Hello, world!")
         [0.123, -0.456, 0.789, ...]
     """
-    import os
-    import httpx
-
-    url = "https://llmfoundry.straive.com/openai/v1/embeddings"
-    key = os.environ["AIPROXY_TOKEN"]
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer { key }",
-    }
-    data = {
-        "model": "text-embedding-3-small",
-        "input": text,
-    }
-    response = httpx.post(url, headers=headers, json=data)
-    embeddings = response.json()["data"][0]["embedding"]
+    from openai_auth import client
+    response = client.embeddings.create(
+        model = "text-embedding-3-small",
+        input = text
+    )
+    embeddings = response.data[0].embedding
     return str(embeddings)

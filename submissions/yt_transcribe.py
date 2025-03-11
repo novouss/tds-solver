@@ -16,15 +16,7 @@ def yt_transcribe(url: str) -> str:
     import json
     import yt_dlp
     import pandas as pd
-    from openai import OpenAI
-
-    URL = "https://llmfoundry.straive.com/openai/v1/"
-    KEY = os.environ["AIPROXY_TOKEN"]
-
-    client = OpenAI(
-        base_url=URL,
-        api_key=KEY
-    )
+    from openai_auth import client
 
     def clean_transcripts(df_export: pd.DataFrame) -> list[str]:
         export = df_export.to_string(index=False)
@@ -49,10 +41,10 @@ def yt_transcribe(url: str) -> str:
         download_audio(url, video_code)
     audio = open(f"./data/{video_code}.mp3", "rb")
     transcription = client.audio.transcriptions.create(
-        file=audio,
-        model="whisper-1",
-        response_format="verbose_json",
-        timestamp_granularities=["word"]
+        file = audio,
+        model = "whisper-1",
+        response_format = "verbose_json",
+        timestamp_granularities = ["word"]
     )
     words = json.loads(transcription.to_json())["words"]
     df = pd.DataFrame(words)
