@@ -9,7 +9,7 @@ This section focuses on each task for each graded assignment and their associate
 
 🚫 Refers to a task that cannot be accomplished
 
-## Completed 15 out of 54 (27.77%)
+## Completed 17 out of 54 (31.48%)
 
 - Graded Assignment 1
   - [VS Code Version](./vscode_info.py) 
