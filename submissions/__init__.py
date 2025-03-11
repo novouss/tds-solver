@@ -1,6 +1,8 @@
+from submissions.bounding_box import bounding_box
 from submissions.compare_files import compare_files
 from submissions.cosine_similarity import cosine_similarity
 from submissions.counting_days import counting_days
+from submissions.encode_image import encode_image
 from submissions.filter_file_attributes import filter_file_attributes
 from submissions.hacker_news import hacker_news
 from submissions.large_json_extract import large_json_extract
@@ -17,9 +19,11 @@ from submissions.yt_transcribe import yt_transcribe
 from submissions.zipfile_extract import zipfile_extract
 
 tasks = {
+    "bounding_box": bounding_box,
     "compare_files": compare_files,
     "cosine_similarity": cosine_similarity,
     "counting_days": counting_days,
+    "encode_image": encode_image,
     "filter_file_attributes": filter_file_attributes,
     "hacker_news": hacker_news,
     "large_json_extract": large_json_extract,

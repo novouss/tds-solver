@@ -9,7 +9,7 @@ This section focuses on each task for each graded assignment and their associate
 
 🚫 Refers to a task that cannot be accomplished
 
-## Completed 17 out of 54 (31.48%)
+## Completed 17 out of 53 (31.48%)
 
 - Graded Assignment 1
   - [VS Code Version](./vscode_info.py) 
@@ -42,8 +42,8 @@ This section focuses on each task for each graded assignment and their associate
 - Graded Assignment 3
   - [LLM Sentiment Analysis](./sentiment_analysis.py) 
   - [LLM Token Costs](./token_costs.py) 
-  - [Generate addresses with LLM](./generate_addresses.py) 
-  - [Base64 Encoding](./base64_encoding.py) 
+  - [Generate addresses with LLM](./generate_addresses.py) 🚫
+  - [Base64 Encoding](./encode_image.py) 
   - [LLM Embeddings](./llm_embeddings.py) 
   - [Embedding Similarity](./cosine_similarity.py) 
   - [Vector Databases](./vector_databses.py) 
@@ -57,7 +57,7 @@ This section focuses on each task for each graded assignment and their associate
   - [Find the bounding box of a city](./bounding_box.py) 
   - [Search Hacker News](./hacker_news.py) 
   - [Find newest GitHub User](./newest_github_user.py) 
-  - [Scheduled GitHub Action](./github_actions.py) 
+  - [Scheduled GitHub Action](./github_actions.py) 💣
   - [Extract tables from PDF](./extract_tables.py) 
   - [Convert PDF to Markdown](./pdf_to_markdown.py) 
 - Graded Assignment 5
