@@ -1,5 +1,34 @@
 
 def bbc_weather(city: str) -> str:
+    """ Fetches the weather forecast data from BBC Weather API and parses it to get the current and future day's weather summaries.
+
+    Args:
+        city (str): The name of the city for which the weather is required.
+
+    Returns:
+        str: A JSON string containing the weather summary data.
+
+    Example:
+        >>> bbc_weather("London")
+        \"\"\"
+        {
+            "2025-02-11": "Sunny intervals and light winds",
+            "2025-02-12": "Light rain showers and a gentle breeze",
+            "2025-02-13": "Light rain showers and light winds",
+            "2025-02-14": "Light rain showers and a gentle breeze",
+            "2025-02-15": "Light rain showers and a gentle breeze",
+            "2025-02-16": "Sunny and light winds",
+            "2025-02-17": "Sunny intervals and light winds",
+            "2025-02-18": "Sunny intervals and light winds",
+            "2025-02-19": "Sunny intervals and light winds",
+            "2025-02-20": "Light rain and light winds",
+            "2025-02-21": "Light cloud and light winds",
+            "2025-02-22": "Sunny and light winds",
+            "2025-02-23": "Light rain showers and light winds",
+            "2025-02-24": "Sunny intervals and light winds"
+        }
+        \"\"\"
+    """
     import os
     import re
     import json
