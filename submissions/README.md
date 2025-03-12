@@ -13,7 +13,7 @@ This section focuses on each task for each graded assignment and their associate
 
 - Graded Assignment 1
   - [VS Code Version](./vscode_info.py)
-  - [Make HTTP Requests with uv](./uv_requests.py)
+  - [Make HTTP Requests with uv](./http_requests.py)
   - [Run command with npx](./npx_prettier.py) ⚠️
   - [Use Google Sheets](./google_sheets.py) 💣
   - [Use Excel](./excel.py) 💣

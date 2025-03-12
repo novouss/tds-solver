@@ -7,6 +7,7 @@ from submissions.counting_days import counting_days
 from submissions.encode_image import encode_image
 from submissions.filter_file_attributes import filter_file_attributes
 from submissions.hacker_news import hacker_news
+from submissions.http_requests import http_requests
 from submissions.image_lightness import image_lightness
 from submissions.large_json_extract import large_json_extract
 from submissions.llm_embeddings import llm_embeddings
@@ -31,6 +32,7 @@ tasks = {
     "encode_image": encode_image,
     "filter_file_attributes": filter_file_attributes,
     "hacker_news": hacker_news,
+    "http_requests": http_requests,
     "image_lightness": image_lightness,
     "large_json_extract": large_json_extract,
     "llm_embeddings": llm_embeddings,
