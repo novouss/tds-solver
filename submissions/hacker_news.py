@@ -31,7 +31,9 @@ def hacker_news(url: str, **kwargs) -> str:
     
     for key, value in kwargs.items():
         query.append(key)
+        query.append("=")
         query.append(value)
+        query.append("&")
     
     query_string = "".join(query)
 
