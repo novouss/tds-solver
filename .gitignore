@@ -13,4 +13,4 @@ wheels/
 # Project based files
 data/
 ignorefolder/
-test.py
+test.*
