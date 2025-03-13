@@ -5,7 +5,7 @@ def http_requests(request: Dict[str: Any]) -> str:
     """ Parses a dictionary of HTTP request parameters and returns the JSON response.
 
     Args:
-        request (Dict[str, Any]): A dictionary containing 'url' and other request parameters
+        request (Dict[str, Any]): A dictionary containing 'url' and other request parameters. The "url" key is required.
 
     Returns:
         str: The JSON response from the HTTP request

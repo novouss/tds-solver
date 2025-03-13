@@ -1,7 +1,7 @@
 
 # Graded Assignment Breakdowns
 
-This section focuses on each task for each graded assignment and their associated module within the project. This also serves as a checklist to idenfity which are possible within a Pythonic approach.
+This section focuses on each task for each graded assignment and their associated module within the project. This also serves as a checklist to identify which are possible within a Pythonic approach.
 
 ⚠️ Refers to a task that might rely on external control
 
@@ -9,7 +9,7 @@ This section focuses on each task for each graded assignment and their associate
 
 🚫 Refers to a task that cannot be accomplished
 
-## Completed 17 out of 53 (31.48%)
+## Completed 23 out of 53 (43.40%)
 
 - Graded Assignment 1
   - [VS Code Version](./vscode_info.py)

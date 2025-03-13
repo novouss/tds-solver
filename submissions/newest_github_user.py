@@ -5,7 +5,6 @@ def newest_github_user(**kwargs) -> str:
     Args:
         **kwargs (dict): Optional query parameters to filter by.
             - q (str): Search query string
-            - 
 
     Returns:
         str: The creation date of the newest GitHub user in ISO 8601 format
