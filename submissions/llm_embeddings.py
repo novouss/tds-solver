@@ -2,17 +2,20 @@
 from typing import List
 
 def llm_embeddings(text: str) -> List[float]:
-    """ Generates embeddings for the given text.
+    """ Generates embeddings for a given text.
 
     Args:
-        text (str): The input text for which embeddings are to be generated.
+        text (str): The text to generate embeddings for.
 
     Returns:
-        str: A list of floating-point numbers representing the embedding of the input text.
+        List[float]: A list of floats representing the embeddings.
+
+    Raises:
+        Exception: If an error occurs during the API call.
 
     Example:
-        >>> llm_embeddings("Hello, world!")
-        [0.123, -0.456, 0.789, ...]
+        >>> llm_embeddings("hello world")
+        [0.234, 0.567, 0.890]
     """
     from openai_auth import client
     response = client.embeddings.create(
