@@ -1,7 +1,7 @@
 
 from typing import Dict, Any
 
-def hacker_news(request: Dict[str: Any]) -> str:
+def hacker_news(request: Dict[str, Any]) -> str:
     """ Returns the link of the most recent article on Hacker News from the given URL.
 
     Args:

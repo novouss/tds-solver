@@ -1,7 +1,7 @@
 
 from typing import Dict, Any
 
-def http_requests(request: Dict[str: Any]) -> str:
+def http_requests(request: Dict[str, Any]) -> str:
     """ Parses a dictionary of HTTP request parameters and returns the JSON response.
 
     Args:
