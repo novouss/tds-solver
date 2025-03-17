@@ -14,28 +14,9 @@ def encode_image(path: str) -> str:
     """
     import json
     import base64
-    # from openai_auth import client
     with open(path, "rb") as img:
         image = base64.b64encode(img.read()).decode("utf-8")
     image_url = f"data:image/png;base64,{image}"
-    # response = client.chat.completions.create(
-    #     model="gpt-4o-mini",
-    #     messages=[
-    #         { "role": "system", "content": "Extract and reply only with the contents of the image" },
-    #         {
-    #             "role": "user",
-    #             "content": [
-    #                 { "type": "text", "text": "What is in this image?" },
-    #                 {
-    #                     "type": "image_url",
-    #                     "image_url": { "url": image_url }
-    #                 },
-    #             ],
-    #         }
-    #     ],
-    # )
-    # content = response.choices[0].message.content
-    # print(content)
     body = {
         "model": "gpt-4o-mini",
         "messages": [

@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from fastapi import Form, File
 
 import chromadb
-from openai_auth import client
+from authentication import client
 from submissions import tasks
 
 app = FastAPI()

@@ -15,7 +15,7 @@ def sentiment_analysis(message: str) -> str:
         >>> sentiment_analysis("I had a great day today!")
         'GOOD'
     """
-    from openai_auth import client
+    from authentication import client
     response = client.chat.completions.create(
         model = "gpt-4o-mini",
         messages = [

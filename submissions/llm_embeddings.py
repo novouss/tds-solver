@@ -17,7 +17,7 @@ def llm_embeddings(text: str) -> List[float]:
         >>> llm_embeddings("hello world")
         [0.234, 0.567, 0.890]
     """
-    from openai_auth import client
+    from authentication import client
     response = client.embeddings.create(
         model = "text-embedding-3-small",
         input = text
