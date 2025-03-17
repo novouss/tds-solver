@@ -47,8 +47,8 @@ This section focuses on each task for each graded assignment and their associate
   - [Generate addresses with LLM](./generate_addresses.py) 🚫
   - [Base64 Encoding](./encode_image.py)
   - [LLM Embeddings](./llm_embeddings.py)
-  - [Embedding Similarity](./cosine_similarity.py)
-  - [Vector Databases](./vector_databses.py)
+  - [Embedding Similarity](./most_similar.py)
+  - [Vector Databases](./vector_databases.py)
   - [Function Calling](./function_calling.py)
   - [Prompt Engineering](./prompt_engineering.py) 🚫
 - Graded Assignment 4
