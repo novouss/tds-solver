@@ -1,5 +1,7 @@
 
-def llm_embeddings(text: str) -> str:
+from typing import List
+
+def llm_embeddings(text: str) -> List[float]:
     """ Generates embeddings for the given text.
 
     Args:
@@ -18,4 +20,4 @@ def llm_embeddings(text: str) -> str:
         input = text
     )
     embeddings = response.data[0].embedding
-    return str(embeddings)
+    return embeddings
