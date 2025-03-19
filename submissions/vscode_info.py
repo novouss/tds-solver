@@ -5,6 +5,6 @@ def vscode_info() -> str:
     Returns:
         str: The result from running `code -s` in the terminal.
     """
-    with open("./vscode_output", "r") as file:
+    with open("./submissions/vscode_output.txt", "r") as file:
         content = file.read()
-    return content
+    return str(content)
