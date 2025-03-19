@@ -19,7 +19,6 @@ def vector_databases(documents: List[str], query: str, n_results: int = 3) -> st
         >>> vector_databases(["document1", "document2"], "hello")
         {"matches": "{'id': '0', 'text': 'document1'}"}
     """
-
     import json
     import chromadb
     client = chromadb.Client()

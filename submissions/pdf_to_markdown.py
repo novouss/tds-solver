@@ -28,4 +28,4 @@ def pdf_to_markdown(path: str) -> str:
     pathlib.Path(output).write_bytes(file.encode())
     with open(output, "r") as file:
         results = file.read()
-    return results
+    return str(results)
