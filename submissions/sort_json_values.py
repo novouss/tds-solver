@@ -1,5 +1,5 @@
 
-def sort_json_values(students: str) -> str:
+def sort_json_values(students: str = '[{"name": "John", "age": 20}, {"name": "Alice", "age": 18}]') -> str:
     """ Sorts a json object of students based on age and name, then returns the sorted data.
 
     Args:
@@ -12,7 +12,7 @@ def sort_json_values(students: str) -> str:
         TypeError: If the input is not a valid JSON string.
 
     Example:
-        >>> sort_json_values('{"name": "John", "age": 20}, {"name": "Alice", "age": 18}')
+        >>> sort_json_values('[{"name": "John", "age": 20}, {"name": "Alice", "age": 18}]')
         '{"name": "Alice","age": 18}, {"name": "John","age": 20}'
     """
     import json 
