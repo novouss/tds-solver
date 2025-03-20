@@ -1,5 +1,12 @@
 
-def newest_github_user(**kwargs) -> str:
+from typing import Dict, Any
+
+default = {
+   "location": "Barcelona",
+   "followers": ">70"
+}
+
+def newest_github_user(request: Dict[str, Any] = default) -> str:
     """ Get the creation date of the newest GitHub user.
 
     Args:
@@ -25,10 +32,10 @@ def newest_github_user(**kwargs) -> str:
     url = "https://api.github.com/search/users"
     query = [url]
     
-    if kwargs:
+    if request:
         query.append("?q=")
 
-    for key, value in kwargs.items():
+    for key, value in request.items():
         query.append(key)
         query.append(":")
         query.append(value)

@@ -10,8 +10,21 @@ ORIGINAL = [
 ]
 
 def jigsaw_image(path: str, original: List[Tuple[int, int]] = ORIGINAL):
+    """ Solves a jigsaw image from a given path.
+
+    Args:
+        path (str): The path to the image.
+        original (List[Tuple[int, int]], optional): A list of coordinates representing the positions where each crop will be placed. Defaults to ORIGINAL.
+
+    Returns:
+        str: The base64 encoded image data as a string.
+
+    Example:
+        >>> jigsaw_image("image.jpg")
+        'iVBORw0KGgoAAANSUhYlPAQUBgAQDAAB4JLk7+/lBM3P+AAEAAAABUklEQVR42NkY3HgAIBAQRxX4QsBAAAAASUVORK5CYII='
+    """
+    import base64
     from PIL import Image
-    from submissions import encode_image
     
     image = Image.open(path)
     
@@ -46,6 +59,7 @@ def jigsaw_image(path: str, original: List[Tuple[int, int]] = ORIGINAL):
     output = "./data/jigsaw.png"
     new_image.save(output)
     
-    b64 = encode_image(output)
+    with open(path, "rb") as img:
+        result = base64.b64encode(img.read()).decode("utf-8")
     
-    return b64
+    return result

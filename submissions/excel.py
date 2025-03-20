@@ -1,7 +1,7 @@
 
 from typing import List
 
-def excel(data: List[int], sort_by: List[int], range: int):
+def excel(data: List[int] = [1,11,11,13,7,1,11,11,7,11,0,2,9,7,10,7], sort_by: List[int] = [10,9,13,2,11,8,16,14,7,15,5,4,6,1,3,12], range: int = 5):
     """ Sorts data in ascending order and returns the sum of a specified number of elements.
 
     Args:
@@ -23,4 +23,4 @@ def excel(data: List[int], sort_by: List[int], range: int):
     df = pd.DataFrame({ "data": data, "sort_by": sort_by })
     df_sorted = df.sort_values(by="sort_by")
     result = df_sorted["data"].head(range).sum()
-    return result
+    return str(result)

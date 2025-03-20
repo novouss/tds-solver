@@ -9,8 +9,6 @@ This section focuses on each task for each graded assignment and their associate
 
 🚫 Refers to a task that cannot be accomplished
 
-## Completed 23 out of 53 (43.40%)
-
 - Graded Assignment 1
   - [VS Code Version](./vscode_info.py)
   - [Make HTTP Requests with uv](./http_requests.py)
@@ -19,14 +17,14 @@ This section focuses on each task for each graded assignment and their associate
   - [Use Excel](./excel.py) 💣
   - [Use DevTools](./chrome_devtools.py) 💣
   - [Count Wednesdays](./counting_days.py)
-  - [Extract CSV from a ZIP](./zipfile_extract.py)
+  - [Extract CSV from a ZIP](./csv_zipfile.py)
   - [Use JSON](./sort_json_values.py)
   - [Multi-cursor edits](./json_cleanup.py)
   - [CSS Selectors](./css_selectors.py)
   - [Process files with different encoding](./process_encoding.py)
   - [Use GitHub](./github_email.py) ⚠️
   - [Replace across files](./replace_across.py)
-  - [List files and attributes](./sort_filter_file_attributes.py)
+  - [List files and attributes](./filter_file_attributes.py)
   - [Move and rename files](./move_rename.py)
   - [Compare files](./compare_files.py)
   - [SQL: Ticket Sales](./ticket_sales.py)
@@ -54,7 +52,7 @@ This section focuses on each task for each graded assignment and their associate
 - Graded Assignment 4
   - [Import HTML to Google Sheets](./html_google.py) 💣
   - [Scrape IMDb Movies](./imdb_movies.py)
-  - [Wikipedia Outline](./wikiepedia_outline.py)
+  - [Wikipedia Outline](./wikipedia_outline.py)
   - [Scrape the BBC Weather API](./bbc_weather.py)
   - [Find the bounding box of a city](./bounding_box.py)
   - [Search Hacker News](./hacker_news.py)

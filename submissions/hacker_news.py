@@ -1,7 +1,13 @@
 
 from typing import Dict, Any
 
-def hacker_news(request: Dict[str, Any]) -> str:
+default = {
+    "url": "https://hnrss.org/newest",
+    "q": "AWS",  # optional search parameter
+    "points": "98"  # optional points filter
+}
+
+def hacker_news(request: Dict[str, Any] = default) -> str:
     """ Returns the link of the most recent article on Hacker News from the given URL.
 
     Args:

@@ -1,6 +1,16 @@
 
-
 def extract_tables(path: str):
+    """ Extracts the total marks for a specific range of pages from a PDF report.
+
+    Args:
+        path (str): The file path to the PDF report.
+        
+    Returns:
+        str: A string representation of the total marks for the specified range of pages.
+        
+    Raises:
+        ValueError: If the provided file path does not end with '.pdf'.
+    """
     import tabula
     import pandas as pd
 
