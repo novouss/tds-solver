@@ -6,6 +6,7 @@ from submissions.colab_key import colab_key
 from submissions.compare_files import compare_files
 from submissions.counting_days import counting_days
 from submissions.create_markdown import create_markdown
+from submissions.css_selectors import css_selectors
 from submissions.csv_zipfile import csv_zipfile
 from submissions.encode_image import encode_image
 from submissions.excel import excel
@@ -18,11 +19,13 @@ from submissions.http_requests import http_requests
 from submissions.image_lightness import image_lightness
 from submissions.imdb_scrape import imdb_scrape
 from submissions.jigsaw_image import jigsaw_image
+from submissions.json_cleanup import json_cleanup
 from submissions.large_json_extract import large_json_extract
 from submissions.llm_embeddings import llm_embeddings
 from submissions.local_llm import local_llm
 from submissions.log_requests import log_requests
 from submissions.most_similar import most_similar
+from submissions.move_rename import move_rename
 from submissions.newest_github_user import newest_github_user
 from submissions.npx_prettier import npx_prettier
 from submissions.parse_sales_data import parse_sales_data
@@ -47,6 +50,7 @@ tasks = {
     "compare_files": compare_files,
     "counting_days": counting_days,
     "create_markdown": create_markdown,
+    "css_selectors": css_selectors,
     "csv_zipfile": csv_zipfile,
     "encode_image": encode_image,
     "excel": excel,
@@ -59,11 +63,13 @@ tasks = {
     "image_lightness": image_lightness,
     "imdb_scrape": imdb_scrape,
     "jigsaw_image": jigsaw_image,
+    "json_cleanup": json_cleanup,
     "large_json_extract": large_json_extract,
     "llm_embeddings": llm_embeddings,
     "local_llm": local_llm,
     "log_requests": log_requests,
     "most_similar": most_similar,
+    "move_rename": move_rename,
     "newest_github_user": newest_github_user,
     "npx_prettier": npx_prettier,
     "parse_sales_data": parse_sales_data,
