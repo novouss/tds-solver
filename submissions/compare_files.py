@@ -15,6 +15,7 @@ def compare_files(path: str) -> str:
         >>> compare_files("path/to/file.zip")
         '36'
     """
+    import shutil
     from helpers.zipfiles import extract_zipfiles
     
     files = extract_zipfiles(path)
@@ -30,5 +31,5 @@ def compare_files(path: str) -> str:
     
     for f1, f2 in zip(file1, file2):
         difference = difference if f1 == f2 else difference + 1
-    
+    shutil.rmtree(files["directory"])
     return str(difference)

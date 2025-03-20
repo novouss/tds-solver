@@ -17,6 +17,7 @@ def csv_zipfile(path: str, column: str = "answer") -> str:
         >>> csv_zipfile("./data/archive.zip", "answer")
         '1bd67'
     """
+    import shutil
     import pandas as pd
     from helpers.zipfiles import extract_zipfiles
     
@@ -24,4 +25,5 @@ def csv_zipfile(path: str, column: str = "answer") -> str:
 
     df = pd.read_csv(files["files"][0])
     results = df[column].values[0]
+    shutil.rmtree(files["directory"])
     return str(results)
