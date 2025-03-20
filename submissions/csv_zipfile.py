@@ -4,7 +4,7 @@ def csv_zipfile(path: str, column: str = "answer") -> str:
 
     Args:
         path (str): The path to the zip archive.
-        column (str): The name of the column to extract. Defaults to "answer".
+        column (str, optional): The name of the column to extract. Defaults to "answer".
 
     Returns:
         str: The value in the specified column.

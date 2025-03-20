@@ -51,7 +51,7 @@ This section focuses on each task for each graded assignment and their associate
   - [Prompt Engineering](./prompt_engineering.py) 🚫
 - Graded Assignment 4
   - [Import HTML to Google Sheets](./html_google.py) 💣
-  - [Scrape IMDb Movies](./imdb_movies.py)
+  - [Scrape IMDb Movies](./imdb_scrape.py)
   - [Wikipedia Outline](./wikipedia_outline.py)
   - [Scrape the BBC Weather API](./bbc_weather.py)
   - [Find the bounding box of a city](./bounding_box.py)

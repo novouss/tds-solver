@@ -6,6 +6,7 @@ from submissions.colab_key import colab_key
 from submissions.compare_files import compare_files
 from submissions.counting_days import counting_days
 from submissions.create_markdown import create_markdown
+from submissions.csv_zipfile import csv_zipfile
 from submissions.encode_image import encode_image
 from submissions.excel import excel
 from submissions.extract_tables import extract_tables
@@ -15,7 +16,7 @@ from submissions.google_sheets import google_sheets
 from submissions.hacker_news import hacker_news
 from submissions.http_requests import http_requests
 from submissions.image_lightness import image_lightness
-from submissions.imdb_movies import imdb_scrape
+from submissions.imdb_scrape import imdb_scrape
 from submissions.jigsaw_image import jigsaw_image
 from submissions.large_json_extract import large_json_extract
 from submissions.llm_embeddings import llm_embeddings
@@ -36,7 +37,6 @@ from submissions.vector_databases import vector_databases
 from submissions.vscode_info import vscode_info
 from submissions.wikipedia_outline import wikipedia_outline
 from submissions.yt_transcribe import yt_transcribe
-from submissions.csv_zipfile import csv_zipfile
 
 tasks = {
     "bbc_weather": bbc_weather,
@@ -47,6 +47,7 @@ tasks = {
     "compare_files": compare_files,
     "counting_days": counting_days,
     "create_markdown": create_markdown,
+    "csv_zipfile": csv_zipfile,
     "encode_image": encode_image,
     "excel": excel,
     "extract_tables": extract_tables,
@@ -77,5 +78,4 @@ tasks = {
     "vscode_info": vscode_info,
     "wikipedia_outline": wikipedia_outline,
     "yt_transcribe": yt_transcribe,
-    "csv_zipfile": csv_zipfile,
 }
