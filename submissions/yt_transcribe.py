@@ -16,7 +16,7 @@ def yt_transcribe(url: str) -> str:
     import json
     import yt_dlp
     import pandas as pd
-    from authentication import client
+    from helpers.authentication import client
 
     def clean_transcripts(df_export: pd.DataFrame) -> list[str]:
         export = df_export.to_string(index=False)

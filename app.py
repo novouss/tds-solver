@@ -4,7 +4,8 @@ from fastapi.responses import JSONResponse
 from fastapi import Form, File
 
 import chromadb
-from authentication import client
+
+from helpers.authentication import client
 from submissions import tasks
 
 app = FastAPI()
@@ -17,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-DATA_PATH = "./data/"
+DATA_PATH = "./data"
 
 FUNCTIONS_DB = chromadb.PersistentClient(path="chromadb")
 FUNC_COLLECTION = FUNCTIONS_DB.get_or_create_collection(name="functions")
@@ -33,14 +34,13 @@ async def run(question: str = Form(...), file: UploadFile = File(...)):
     Returns:
         dict: Returns the answer based on user question.
     """
-    filepath = DATA_PATH + file.filename
-    
+
+    # Creates the filepath for both extraction and retrieval
+    filepath = "/".join([DATA_PATH, file.filename])
+    # Creates the directory
     with open(filepath, "wb") as f:
         f.write(await file.read())
     
-    if file.filename.endswith(".zip"):
-        files = tasks["zipfile_extract"](filepath, DATA_PATH)
-
     # response = client.chat.completions.create(
     #     model = "gpt-4o-mini",
     #     messages = [{
@@ -59,7 +59,6 @@ async def run(question: str = Form(...), file: UploadFile = File(...)):
         "question": question,
         "file_name": file.filename,
         "file_location": filepath,
-        "files": files
     }
     
     return JSONResponse(content={ "answer": answer })

@@ -15,13 +15,7 @@ def sentiment_analysis(message: str) -> str:
         >>> sentiment_analysis("I had a great day today!")
         'GOOD'
     """
-    from authentication import client
-    response = client.chat.completions.create(
-        model = "gpt-4o-mini",
-        messages = [
-            { "role": "system", "content": "Analyze the sentiment of the text and reply only by whether it can be categorized as GOOD, BAD, or NEUTRAL." },
-            { "role": "user", "content": message }
-        ],
-    )
-    content = response.choices[0].message.content
-    return content
+    import helpers.authentication as auth
+    system = "Analyze the sentiment of the text and reply only by whether it can be categorized as GOOD, BAD, or NEUTRAL"
+    result = auth.ask_someone(system, message)
+    return result
