@@ -12,6 +12,7 @@ from submissions.google_sheets import google_sheets
 from submissions.hacker_news import hacker_news
 from submissions.http_requests import http_requests
 from submissions.image_lightness import image_lightness
+from submissions.imdb_movies import imdb_scrape
 from submissions.jigsaw_image import jigsaw_image
 from submissions.large_json_extract import large_json_extract
 from submissions.llm_embeddings import llm_embeddings
@@ -26,9 +27,9 @@ from submissions.sentiment_analysis import sentiment_analysis
 from submissions.sort_json_values import sort_json_values
 from submissions.vector_databases import vector_databases
 from submissions.vscode_info import vscode_info
-from submissions.wikiepedia_outline import wikipedia_outline
+from submissions.wikipedia_outline import wikipedia_outline
 from submissions.yt_transcribe import yt_transcribe
-from submissions.zipfile_extract import zipfile_extract
+from submissions.csv_zipfile import csv_zipfile
 
 tasks = {
     "bbc_weather": bbc_weather,
@@ -45,6 +46,7 @@ tasks = {
     "hacker_news": hacker_news,
     "http_requests": http_requests,
     "image_lightness": image_lightness,
+    "imdb_scrape": imdb_scrape,
     "jigsaw_image": jigsaw_image,
     "large_json_extract": large_json_extract,
     "llm_embeddings": llm_embeddings,
@@ -61,5 +63,5 @@ tasks = {
     "vscode_info": vscode_info,
     "wikipedia_outline": wikipedia_outline,
     "yt_transcribe": yt_transcribe,
-    "zipfile_extract": zipfile_extract,
+    "csv_zipfile": csv_zipfile,
 }
