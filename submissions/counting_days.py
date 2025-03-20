@@ -1,48 +1,44 @@
 
-def counting_days(days: str, datepath: str) -> str:
-    """ Counts the number of occurrences of a specific day of the week in a list of dates provided in the datepath.
-    
+def counting_days(day: str = "Wednesdays", start: str = "1986-11-29", end: str = "2008-08-14") -> str:
+    """ Calculates the total number of day of the week between two dates.
+
     Args:
-        days (str): The day of the week. The string can also end with "day" or "days" (e.g., "Monday", "Mondays", "mon").
-        datepath (str): The file path containing the list of dates.
-        
+        day (str): The day of the week to calculate for Mondays, Tues, Wed, THURS, fri, Saturday, or Sunday
+        start (str): The start date in 'year-month-day' format
+        end (str): The end date in 'year-month-day' format
+
     Returns:
-        str: The count of how many times the day of the week appeared in the provided list of dates.
-    
+        str: The total number of of day of the week between the two dates
+
+    Raises:
+        ValueError: If the day of the week is not one of 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', or 'sun'
+
     Example:
-        >>> counting_days("WEDNESDAYS", "dates.txt")
-        38
+        >>> counting_days('wed', '2022-01-01', '2022-12-31')
+        '13'
     """
-    from dateutil.parser import parse
-    
-    with open(datepath, "r") as file:
-        dates = file.readlines()
-    
-    day_number = {
-        "mon": 0,
-        "tue": 1,
-        "wed": 2,
-        "thurs": 3,
-        "fri": 4,
-        "sat": 5,
-        "sun": 6
-    }
-    
-    days = days.lower()
-    
-    if days.endswith("days"):
-        days = days[:len("days")]
-    elif days.endswith("day"):
-        days = days[:len("day")]
-    
-    count_days = 0
-    
-    for date_str in dates:
-        date_str = date_str.strip()
-        try:
-            date = parse(date_str)
-            if date.weekday() == day_number[days]:
-                count_days += 1
-        except ValueError:
-            continue
-    return str(count_days)
+    def day_to_number(day: str) -> int:
+        day = day.lower()[:3]
+        days = {
+            "mon": 0,
+            "tue": 1,
+            "wed": 2,
+            "thu": 3,
+            "fri": 4,
+            "sat": 5,
+            "sun": 6
+        }
+        return days[day]
+    import datetime
+
+    # Assuming start and end dates are formatted like as year-month-day
+    start = start.split("-")
+    end = end.split("-")
+
+    start_date = datetime.datetime(int(start[0]), int(start[1]), int(start[2]))
+    end_date = datetime.datetime(int(end[0]), int(end[1]), int(end[2]))
+    days_diff = (end_date - start_date).days
+    full_weeks = days_diff // 7
+    remaining_days = 1 if days_diff % 7 >= day_to_number(day) else 0
+    results = full_weeks + remaining_days
+    return str(results)

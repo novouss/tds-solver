@@ -1,27 +1,30 @@
     
-def compare_files(path1: str, path2: str) -> str:
-    """ Compare two files line by line and counts the number of differing lines.
+def compare_files(path: str) -> str:
+    """ Compares two files at the specified path.
 
     Args:
-        path1 (str): The file path of the first file to compare.
-        path2 (str): The file path of the second file to compare.
-    
+        path (str): The path to the zip file containing the two files to be compared.
+
     Returns:
-        str: The number of lines that differ between the two files.
-    
+        int: The number of differences found between the two files.
+
     Raises:
-        FileNotFoundError: If the specified directory does not exist.
-        
+        FileNotFoundError: If the zip file is not found.
+
     Example:
-        >>> compare_files("a.txt", "b.txt")
-        38
+        >>> compare_files("path/to/file.zip")
+        0
     """
-    try:
-        with open(path1, "r") as lines1, open(path2, "r") as lines2:
-            file1 = lines1.readlines()
-            file2 = lines2.readlines()
-    except FileNotFoundError as fnfe:
-        raise FileNotFoundError(fnfe)
+    from helpers.zipfiles import extract_zipfiles
+    
+    files = extract_zipfiles(path)
+
+    path1 = files["files"][0]
+    path2 = files["files"][1]
+
+    with open(path1, "r") as lines1, open(path2, "r") as lines2:
+        file1 = lines1.readlines()
+        file2 = lines2.readlines()
     
     difference = 0
     
