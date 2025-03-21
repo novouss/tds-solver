@@ -32,7 +32,7 @@ def hacker_news(request: Dict[str, Any] = default) -> str:
     ...    "points": "98"
     ... }
     >>> hacker_news(request)
-    https://example.org/latest-post
+    'https://example.org/latest-post'
     """
     import httpx
     import xml.etree.ElementTree as ET

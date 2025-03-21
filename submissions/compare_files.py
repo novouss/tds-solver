@@ -13,7 +13,7 @@ def compare_files(path: str) -> str:
 
     Example:
         >>> compare_files("path/to/file.zip")
-        0
+        '36'
     """
     from helpers.zipfiles import extract_zipfiles
     

@@ -70,4 +70,4 @@ This section focuses on each task for each graded assignment and their associate
   - [Extract nested JSON keys](./large_json_extract.py)
   - [DuckDB: Social Media Interactions](./duckdb_interactions.py) ⚠️
   - [Transcribe a Youtube video](./yt_transcribe.py)
-  - [Reconstruct an image](./jigsaw_image.py) ⚠️
+  - [Reconstruct an image](./jigsaw_image.py) 

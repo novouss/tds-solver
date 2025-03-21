@@ -16,7 +16,7 @@ def imdb_scrape(request: Dict[str, Any] = { "url": "https://www.imdb.com/search/
 
     Example:
         >>> imdb_scrape()
-        "'[{"id": "tt13406094", "title": "1. The White Lotus", "year": "2021\\u2013", "rating": "8.0"}, {...}]'
+        '[{"id": "tt13406094", "title": "1. The White Lotus", "year": "2021\\u2013", "rating": "8.0"}, {...}]'
     """
     
     import json

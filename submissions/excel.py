@@ -17,7 +17,7 @@ def excel(data: List[int] = [1,11,11,13,7,1,11,11,7,11,0,2,9,7,10,7], sort_by: L
     
     Example:
         >>> excel([1,11,11,13,7,1,11,11,7,11,0,2,9,7,10,7], [10,9,13,2,11,8,16,14,7,15,5,4,6,1,3,12], 5)
-        32
+        '32'
     """
     import pandas as pd
     df = pd.DataFrame({ "data": data, "sort_by": sort_by })

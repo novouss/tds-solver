@@ -12,13 +12,13 @@ def pdf_to_markdown(path: str) -> str:
         Exception: If an error occurs during the conversion process.
 
     Example:
-    >>> pdf_to_markdown("/path/to/file.pdf")
-    # Hello World
+        >>> pdf_to_markdown("/path/to/file.pdf")
+        # Hello World
 
-    Nice to see you
+        Nice to see you
 
-    - Wow!
-    - Cool
+        - Wow!
+        - Cool
     """
     import pymupdf4llm as pydf
     import pathlib

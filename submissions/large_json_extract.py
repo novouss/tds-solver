@@ -15,7 +15,7 @@ def large_json_extract(path: str, pattern: str = '"SLQ":') -> str:
     
     Example:
         >>> large_json_extract('./data/large_json.json')
-        2297
+        '2297'
     """
     with open(path, "r") as file:
         data = file.read()

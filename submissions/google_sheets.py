@@ -12,7 +12,7 @@ def google_sheets(sequence: List[int] = [9, 22, 35, 48, 61, 74, 87, 100, 113, 12
     
     Example:
         >>> google_sheets([1,2,3,4,5])
-        "15"
+        '15'
     """    
     results = sum(sequence)
     return str(results)

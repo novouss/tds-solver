@@ -17,7 +17,7 @@ def most_similar(embeddings: Dict[str, List[float]]) -> str:
     Example:
         >>> embeddings = {"a": [0.8, 0.6, 0.7], "b": [0.5, 0.9, 0.4], "c": [0.7, 0.8, 0.6]}
         >>> most_similar(embeddings)
-        "('a', 'b')"
+        '("a", "b")'
     """
     import numpy as np
 

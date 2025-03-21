@@ -10,7 +10,7 @@ def yt_transcribe(url: str) -> str:
 
     Example:
         >>> yt_transcribe("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-        152
+        '152'
     """
     import os
     import json

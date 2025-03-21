@@ -15,7 +15,7 @@ def csv_zipfile(path: str, column: str = "answer") -> str:
 
     Example:
         >>> csv_zipfile("./data/archive.zip", "answer")
-        "1bd67"
+        '1bd67'
     """
     import pandas as pd
     from helpers.zipfiles import extract_zipfiles

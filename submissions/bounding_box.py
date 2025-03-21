@@ -11,7 +11,7 @@ def bounding_box(city: str, country: str) -> str:
 
     Example:
         >>> bounding_box("Hyderabad", "India")
-        17.5608321
+        '17.5608321'
     """
     from geopy.geocoders import Nominatim
     locator = Nominatim(user_agent="myGeocoder")

@@ -20,7 +20,7 @@ def filter_file_attributes(path: str, bytes: int = 484, year: int = 2012, month:
 
     Example:
         >>> filter_file_attributes("./data/list-attributes.zip")
-        "154355"
+        '154355'
     """
     import pandas as pd
     import helpers

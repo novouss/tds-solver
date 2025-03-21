@@ -15,7 +15,7 @@ def replace_across(dirpath: str, replace_from: str, replace_to: str) -> str:
     
     Example:
         >>> replace_across_files("./data/", "IITM", "IIT Madras")
-        f200c727b66d4190e015287a406619efb385517c62ee3c1eeb1b41c4ad5cc5e5  -
+        'f200c727b66d4190e015287a406619efb385517c62ee3c1eeb1b41c4ad5cc5e5  -'
     """
     import os
     import re
