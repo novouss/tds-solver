@@ -1,14 +1,14 @@
 
 import os
-from typing import List
 from openai import OpenAI
+from typing import List, Dict, Any
 
 URL = "https://llmfoundry.straive.com/openai/v1/"
 KEY = os.environ["AIPROXY_TOKEN"]
 
 client = OpenAI(
-    base_url=URL,
-    api_key=KEY
+    base_url = URL,
+    api_key = KEY
 )
 
 model = "gpt-4o-mini"
@@ -39,3 +39,14 @@ def generate_embeddings(text: str) -> List[float]:
     )
     embeddings = response.data[0].embedding
     return embeddings
+
+def ask_tools(prompt: str, tools: list[Dict[str, Any]]):
+    response = client.chat.completions.create(
+        model = model,
+        messages = [
+            { "role": "user", "content": prompt }
+        ],
+        functions = tools,
+        function_call = "auto"
+    )
+    return response.choices[0].message.function_call
