@@ -61,10 +61,11 @@ This section focuses on each task for each graded assignment and their associate
   - [Extract tables from PDF](./extract_tables.py)
   - [Convert PDF to Markdown](./pdf_to_markdown.py)
 - Graded Assignment 5
-  - [Clean up Excel sales data](./clean_sales.py) 💣
+  - [Clean up Excel sales data](./excel_sales.py) 💣
   - [Clean up student marks](./clean_student_marks.py)
-  - [Apache log requests](./log_requests.py) 💣
-  - [Apache log downloads](./log_request_downloads.py)
+  - [Apache log requests](./log_requests.py)
+  - [Apache log downloads](./request_downloads.py)
+  - [Clean sales data](./clean_sales.py)
   - [Parsing Partial JSON](./parse_sales_data.py)
   - [Extract nested JSON keys](./large_json_extract.py)
   - [DuckDB: Social Media Interactions](./duckdb_interactions.py) ⚠️
