@@ -3,6 +3,13 @@ from typing import Dict, Any
 
 EXPORT_PATH = "./data/exports"
 
+def extract(path: str) -> Dict[str, Any]:
+    if path.endswith(".zip"):
+        return extract_zipfiles(path)
+    if path.endswith(".gz"):
+        return extract_gzip(path)
+    return None
+
 def extract_zipfiles(path: str) -> Dict[str, Any]:
     import zipfile
 
@@ -49,3 +56,18 @@ def zipfile_info(path: str) -> Dict[str, Any]:
             })
     return files
 
+def extract_gzip(path: str) -> Dict[str, Any]:
+    import gzip
+    
+    # gzips are only for single files. Source: https://en.wikipedia.org/wiki/Gzip
+    with gzip.open(path, "r") as f:
+        contents = f.readlines()
+    
+    content = [str(x, 'utf-8') for x in contents]
+
+    results = {
+        # "directory": export, # No directory will be pushed
+        "content": content
+    }
+
+    return results

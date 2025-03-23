@@ -18,10 +18,11 @@ def log_requests(path: str, request: str = "/carnatic/", day: str = "wednesday",
     Raises:
         No errors are expected for this function, but raising an exception can be used to indicate any issues.
     """
+    import helpers.zipfiles as zip
     from datetime import datetime
     
-    with open(path, "r") as file:
-        contents = file.readlines()
+    contents = zip.extract(path)["content"]
+
     log = []
     
     for content in contents:

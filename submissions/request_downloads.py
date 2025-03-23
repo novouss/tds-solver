@@ -17,8 +17,8 @@ def request_downloads(path: str, request: str = "telugump3/", date: str = "2024-
     import pandas as pd
     from submissions import log_requests
     
-    df = log_requests(path, "DataFrame")
-    
+    df = log_requests(path, returns = "DataFrame")
+
     df = df[
         (df["request"].str.contains(request)) &
         (df["time"].dt.date == pd.to_datetime(date).date())
