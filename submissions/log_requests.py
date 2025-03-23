@@ -1,7 +1,23 @@
 
 import pandas as pd
 
-def log_requests(path: str, returns: str = None) -> str | pd.DataFrame:
+def log_requests(path: str, request: str = "/carnatic/", day: str = "wednesday", start_hour: int = 7, end_hour: int = 14, returns: str = None) -> str | pd.DataFrame:
+    """ Parse a log file and return the number of requests made during a specific time range.
+
+    Args:
+        path (str): The path to the log file.
+        request (str, optional): The request to filter by. Defaults to "/carnatic/".
+        day (str, optional): The day to filter by. Defaults to "wednesday".
+        start_hour (int, optional): The start hour to filter by. Defaults to 7.
+        end_hour (int, optional): The end hour to filter by. Defaults to 14.
+        returns (str, optional): Specifies whether to return the DataFrame or a count as a string. Defaults to None.
+
+    Returns:
+        str: A count of requests meeting the specified criteria.
+
+    Raises:
+        No errors are expected for this function, but raising an exception can be used to indicate any issues.
+    """
     from datetime import datetime
     
     with open(path, "r") as file:
@@ -42,10 +58,10 @@ def log_requests(path: str, returns: str = None) -> str | pd.DataFrame:
         return df
     
     df = df[
-        (df["day_name"] == "wednesday") &
-        (df["request"].str.contains("/carnatic/")) &
-        (df["time"].dt.hour >= 7) &
-        (df["time"].dt.hour < 14)
+        (df["request"].str.contains(request)) &
+        (df["day_name"] == day) &
+        (df["time"].dt.hour >= start_hour) &
+        (df["time"].dt.hour < end_hour)
     ]
     
     result = len(df)

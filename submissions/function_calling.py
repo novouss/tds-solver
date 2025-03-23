@@ -90,6 +90,18 @@ function_calls = [
 ]
 
 def function_calling(prompt: str):
+    """ Returns a JSON string containing the result of the tool call.
+
+    Args:
+        prompt (str): The prompt to display to the user.
+
+    Returns:
+        str: A JSON-formatted string with the name and arguments of the called tool.
+        
+    Example:
+    >>> function_calling("Which tool would you like to call?")
+    '{"name": "tool_name", "arguments": ["arg1", "arg2"]}'"
+    """
     import json
     from helpers import ask_tools
     response = ask_tools(prompt, function_calls)

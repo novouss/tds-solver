@@ -1,5 +1,18 @@
 
 def create_markdown(message: str):
+    """ Asks the user for raw Markdown content and returns it.
+
+    Args:
+        message (str): A prompt to guide the user's response.
+
+    Returns:
+        str: The user's Markdown content.
+
+    Example:
+        >>> create_markdown("Write a short introduction about yourself.")
+        # Introduction
+        > This is an example of what I am working on.
+    """
     from helpers import ask_someone
     
     system = """
