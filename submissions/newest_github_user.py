@@ -5,7 +5,7 @@ original = {
    "location": "Barcelona",
    "followers": ">70"
 }
-default = json.loads(original)
+default = json.dumps(original)
 
 def newest_github_user(request: str = default) -> str:
     """ Get the creation date of the newest GitHub user.

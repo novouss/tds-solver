@@ -5,7 +5,7 @@ original = {
     "url": "https://www.imdb.com/search/title/", 
     "user_rating": "7,8"
 }
-default = json.loads(original)
+default = json.dumps(original)
 
 def imdb_scrape(request: str = default) -> str:
     """ Scrapes IMDb and returns the top 25 movie titles.
