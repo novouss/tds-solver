@@ -1,11 +1,9 @@
 
-from typing import Dict, List
-
-def most_similar(embeddings: Dict[str, List[float]]) -> str:
+def most_similar(embeddings: str) -> str:
     """ Finds the most similar embeddings to a given set of embeddings.
 
     Args:
-        embeddings (Dict[str, List[float]]): A dictionary where keys are embeddings and values are lists of floats.
+        embeddings (str): A dictionary where keys are embeddings and values are lists of floats.
 
     Returns:
         str: A tuple containing the two most similar embeddings.
@@ -19,10 +17,13 @@ def most_similar(embeddings: Dict[str, List[float]]) -> str:
         >>> most_similar(embeddings)
         '("a", "b")'
     """
+    import json
     import numpy as np
 
     def cosine_similarity(u: np.ndarray, v: np.ndarray) -> float:
         return (u @ v) / (np.linalg.norm(u) * np.linalg.norm(v))
+
+    embeddings = json.loads(embeddings)
 
     for i in embeddings:
         embeddings[i] = np.atleast_1d(embeddings[i])

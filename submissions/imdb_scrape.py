@@ -1,13 +1,18 @@
 
-from typing import Dict, Any
+import json
 
-def imdb_scrape(request: Dict[str, Any] = { "url": "https://www.imdb.com/search/title/", "user_rating": "7,8" }) -> str:
+original = {
+    "url": "https://www.imdb.com/search/title/", 
+    "user_rating": "7,8"
+}
+default = json.loads(original)
+
+def imdb_scrape(request: str = default) -> str:
     """ Scrapes IMDb and returns the top 25 movie titles.
 
-    Args:
-        url (str): The IMDb search URL. Defaults to "https://www.imdb.com/search/title/".
-        user_rating (str): The user rating filter. Defaults to "7,8".
-    
+    Args
+        request (str): A dictionary containing the URL and other query parameters. A "url" key is required. e.g. { "url": "https://www.imdb.com/search/title/", "user_rating": "7,8" }
+
     Returns:
         str: A JSON string of the top 25 movie title metadata.
 
@@ -19,13 +24,13 @@ def imdb_scrape(request: Dict[str, Any] = { "url": "https://www.imdb.com/search/
         '[{"id": "tt13406094", "title": "1. The White Lotus", "year": "2021\\u2013", "rating": "8.0"}, {...}]'
     """
     
-    import json
     import httpx
     from bs4 import BeautifulSoup
     
     headers = {
         "User-Agent": "Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
     }
+    request = json.loads(request)
 
     response = httpx.get(request.pop("url"), headers=headers, params=request, verify=True)
     soup = BeautifulSoup(response.content, "html.parser")

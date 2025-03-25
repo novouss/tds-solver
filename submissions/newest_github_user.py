@@ -1,17 +1,17 @@
 
-from typing import Dict, Any
+import json
 
-default = {
+original = {
    "location": "Barcelona",
    "followers": ">70"
 }
+default = json.loads(original)
 
-def newest_github_user(request: Dict[str, Any] = default) -> str:
+def newest_github_user(request: str = default) -> str:
     """ Get the creation date of the newest GitHub user.
 
     Args:
-        **kwargs (dict): Optional query parameters to filter by.
-            - q (str): Search query string
+        request (str): A dictionary containing the optional query parameters to filter by. e.g. { "location": "Barcelona", "followers": ">70" }
 
     Returns:
         str: The creation date of the newest GitHub user in ISO 8601 format
@@ -20,14 +20,13 @@ def newest_github_user(request: Dict[str, Any] = default) -> str:
         httpx.HTTPError: If the API request fails
 
     Example:
-        >>> kwargs = {
-        ...    "location": "Barcelona",
-        ...    "followers": ">70"
-        ... }
-        >>> newest_github_user(**kwargs)
+        >>> request = '{ "location": "Barcelona", "followers": ">70" }'
+        >>> newest_github_user(request)
         '2022-07-22T14:30:00Z'
     """
     import httpx
+
+    request = json.loads(request)
 
     url = "https://api.github.com/search/users"
     query = [url]
