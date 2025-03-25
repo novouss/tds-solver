@@ -15,7 +15,7 @@ def move_rename(path: str):
    
     directory = extract_zipfiles(path)
 
-    export = "/".join([directory["directory"], "export/"])
+    export = os.join.path(directory["directory"], "export")
     if not os.path.exists(export):
         os.mkdir(export)
 
@@ -33,13 +33,15 @@ def move_rename(path: str):
                 new_name += str((int(char) + 1) % 10)
             else:
                 new_name += char
-        os.rename("/".join([export, file]), "/".join([export, new_name]))
-        with open("/".join([export, new_name]), "r") as file:
+        old = os.path.join(export, file)
+        new = os.path.join(export, new_name)
+        os.rename(old, new)
+        with open(new, "r") as file:
             filenames.append(":".join([new_name, file.read()]))
 
     filenames.sort()
     output = "\n".join(filenames)
-    output += "\n"
+    output += "\n" # Some goofy requirement for the sha256 hash
     result = hashlib.sha256(output.encode('utf-8')).digest().hex()
     shutil.rmtree(directory["directory"])
     return result + "  -"

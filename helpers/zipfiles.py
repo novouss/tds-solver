@@ -1,5 +1,6 @@
 
 from typing import Dict, Any
+import os
 
 EXPORT_PATH = "./data/exports"
 
@@ -15,14 +16,14 @@ def extract_zipfiles(path: str) -> Dict[str, Any]:
 
     directory = path.split("/") # ., data, requirements.zip
     folder = directory[len(directory) - 1][:-len(".zip")] # requirements.zip to requirements
-    export = "/".join([EXPORT_PATH, folder]) # ./data/exports/requirements
+    export = os.path.join(EXPORT_PATH, folder) # ./data/exports/requirements
 
     with zipfile.ZipFile(path, "r") as f:
         f.extractall(export)
         files = f.namelist() # ["test.txt"]
     
     for idx, file in enumerate(files):
-        files[idx] = "/".join([export, file]) # ./data/exports/requirements/test.txt
+        files[idx] = os.path.join(export, file) # ./data/exports/requirements/test.txt
 
     results = {
         "directory": export,
