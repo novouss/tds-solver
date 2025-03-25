@@ -1,4 +1,6 @@
 
+# TODO: This doesn't handle the data clean up that Excel was responsible for
+
 def clean_sales(path: str, product: str = "Car", city: str = "Osaka", sales_min: int = 152):
     """ Cleans sales data from a CSV file and returns the total sales.
 
@@ -16,7 +18,7 @@ def clean_sales(path: str, product: str = "Car", city: str = "Osaka", sales_min:
     
     Example:
         >>> clean_sales("./data/sales.csv")
-        "2257"
+        '2257'
     """
     import pandas as pd
     df = pd.read_csv(path)

@@ -1,4 +1,6 @@
 
+# TODO: This might not work as expected. It requires to sha256sum the file, but the output of this module does not match the expected output.
+
 def npx_prettier(path: str):
     from helpers import ask_someone
     with open(path, "r") as f:

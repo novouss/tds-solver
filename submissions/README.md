@@ -13,9 +13,9 @@ This section focuses on each task for each graded assignment and their associate
   - [VS Code Version](./vscode_info.py)
   - [Make HTTP Requests with uv](./http_requests.py)
   - [Run command with npx](./npx_prettier.py) ⚠️
-  - [Use Google Sheets](./google_sheets.py) 💣
-  - [Use Excel](./excel.py) 💣
-  - [Use DevTools](./chrome_devtools.py) 💣
+  - [Use Google Sheets](./google_sheets.py)
+  - [Use Excel](./excel.py)
+  - [Use DevTools](./chrome_devtools.py)
   - [Count Wednesdays](./counting_days.py)
   - [Extract CSV from a ZIP](./csv_zipfile.py)
   - [Use JSON](./sort_json_values.py)
