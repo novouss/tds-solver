@@ -1,5 +1,6 @@
 from submissions.bbc_weather import bbc_weather
 from submissions.bounding_box import bounding_box
+from submissions.chrome_devtools import chrome_devtools
 from submissions.clean_sales import clean_sales
 from submissions.clean_student_marks import clean_student_marks
 from submissions.colab_key import colab_key
@@ -35,6 +36,7 @@ from submissions.replace_across import replace_across
 from submissions.request_downloads import request_downloads
 from submissions.sentiment_analysis import sentiment_analysis
 from submissions.sort_json_values import sort_json_values
+from submissions.ticket_sales import ticket_sales
 from submissions.token_costs import token_costs
 from submissions.vector_databases import vector_databases
 from submissions.vscode_info import vscode_info
@@ -45,6 +47,7 @@ tasks = {
     "bbc_weather": bbc_weather,
     "bounding_box": bounding_box,
     "colab_key": colab_key,
+    "chrome_devtools": chrome_devtools,
     "clean_sales": clean_sales,
     "clean_student_marks": clean_student_marks,
     "compare_files": compare_files,
@@ -79,6 +82,7 @@ tasks = {
     "request_downloads": request_downloads,
     "sentiment_analysis": sentiment_analysis,
     "sort_json_values": sort_json_values,
+    "ticket_sales": ticket_sales,
     "token_costs": token_costs,
     "vector_databases": vector_databases,
     "vscode_info": vscode_info,
