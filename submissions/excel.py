@@ -5,9 +5,9 @@ def excel(data: List[int] = [1,11,11,13,7,1,11,11,7,11,0,2,9,7,10,7], sort_by: L
     """ Sorts data in ascending order and returns the sum of a specified number of elements.
 
     Args:
-        data (List[int]): A list of integers.
-        sort_by (List[int]): A list of sorting criteria indices.
-        range (int): The number of elements to consider.
+        data (List[int], optional): A list of integers.
+        sort_by (List[int], optional): A list of sorting criteria indices.
+        range (int, optional): The number of elements to consider.
 
     Returns:
         float: The sum of the specified elements in the sorted data.

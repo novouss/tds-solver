@@ -5,7 +5,7 @@ def google_sheets(sequence: List[int] = [9, 22, 35, 48, 61, 74, 87, 100, 113, 12
     """ Summarizes a sequence of numbers.
 
     Args:
-        sequence (List[int]): A one-dimensional list of numbers.
+        sequence (List[int], optional): A one-dimensional list of numbers.
 
     Returns:
         str: The result of adding all the sequence of numbers together.
