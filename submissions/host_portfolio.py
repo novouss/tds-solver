@@ -12,7 +12,7 @@ def host_portfolio(html_tag: str) -> str:
         FileNotFoundError: If the index.html file does not exist. IOError: If there is an error writing to the index.html file.
 
     Example: 
-        >>> host_portfolio("New Content") 
+        >>> host_portfolio("<!--email_off-->raymondbrian.gorospe@straive.com<!--/email_off-->") 
         'https://novouss.github.io/tds-solver/'
     """
         
@@ -21,7 +21,7 @@ def host_portfolio(html_tag: str) -> str:
     with open(static_index, "r") as file:
         lines = file.readlines()
         
-    for idx, line in enumerate(line):
+    for idx, line in enumerate(lines):
         if "<!---Add Content Here--->" in line:
             lines.insert(idx + 1, html_tag + "\n")
     
@@ -29,4 +29,3 @@ def host_portfolio(html_tag: str) -> str:
         file.writelines(lines)
     
     return "https://novouss.github.io/tds-solver/"
-    
