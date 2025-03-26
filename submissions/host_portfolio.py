@@ -15,17 +15,16 @@ def host_portfolio(html_tag: str) -> str:
         >>> host_portfolio("<!--email_off-->raymondbrian.gorospe@straive.com<!--/email_off-->") 
         'https://novouss.github.io/tds-solver/'
     """
-        
+    from submissions import github_push
     static_index = "./index.html"
     
     with open(static_index, "r") as file:
         lines = file.readlines()
         
     for idx, line in enumerate(lines):
-        if "<!---Add Content Here--->" in line:
+        if "<!--Add Content Here-->" in line:
             lines.insert(idx + 1, html_tag + "\n")
     
-    with open(static_index, "w") as file:
-        file.writelines(lines)
+    github_push(static_index, "".join(lines))
     
     return "https://novouss.github.io/tds-solver/"
