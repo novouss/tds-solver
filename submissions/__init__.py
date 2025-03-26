@@ -14,8 +14,10 @@ from submissions.excel import excel
 from submissions.extract_tables import extract_tables
 from submissions.filter_file_attributes import filter_file_attributes
 from submissions.function_calling import function_calling
+from submissions.github_push import github_push
 from submissions.google_sheets import google_sheets
 from submissions.hacker_news import hacker_news
+from submissions.host_portfolio import host_portfolio
 from submissions.http_requests import http_requests
 from submissions.image_lightness import image_lightness
 from submissions.imdb_scrape import imdb_scrape
@@ -60,8 +62,10 @@ tasks = {
     "extract_tables": extract_tables,
     "filter_file_attributes": filter_file_attributes,
     "function_calling": function_calling,
+    "github_push": github_push,
     "google_sheets": google_sheets,
     "hacker_news": hacker_news,
+    "host_portfolio": host_portfolio,
     "http_requests": http_requests,
     "image_lightness": image_lightness,
     "imdb_scrape": imdb_scrape,

@@ -55,11 +55,11 @@ def create_properties(desc, datatype: str) -> Dict[str, Any]:
     types = {
         "str": "string",
         "int": "integer",
-        "Dict": "string",
+        # "Dict": "string",
         "List": "array",
     }
 
-    if datatype == "str" or datatype == "int":
+    if datatype in ["str", "int"]:
         return { 
             "type": types[datatype], 
             "description": desc

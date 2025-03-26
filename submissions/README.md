@@ -22,7 +22,7 @@ This section focuses on each task for each graded assignment and their associate
   - [Multi-cursor edits](./json_cleanup.py)
   - [CSS Selectors](./css_selectors.py)
   - [Process files with different encoding](./process_encoding.py)
-  - [Use GitHub](./github_email.py) ⚠️
+  - [Use GitHub](./github_push.py) ⚠️
   - [Replace across files](./replace_across.py)
   - [List files and attributes](./filter_file_attributes.py)
   - [Move and rename files](./move_rename.py)
@@ -70,4 +70,4 @@ This section focuses on each task for each graded assignment and their associate
   - [Extract nested JSON keys](./large_json_extract.py)
   - [DuckDB: Social Media Interactions](./duckdb_interactions.py) ⚠️
   - [Transcribe a Youtube video](./yt_transcribe.py)
-  - [Reconstruct an image](./jigsaw_image.py) 
+  - [Reconstruct an image](./jigsaw_image.py)
