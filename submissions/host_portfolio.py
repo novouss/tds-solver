@@ -1,7 +1,7 @@
 
 def host_portfolio(html_tag: str) -> str:
     
-    static_index = "./static/index.html"
+    static_index = "./index.html"
     
     with open(static_index, "r") as file:
         lines = file.readlines()
