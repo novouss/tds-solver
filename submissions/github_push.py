@@ -21,9 +21,6 @@ def github_push(filename: str = "email.json", value: str =  '{"email": "raymondb
     repository = "tds-solver"
     token = os.environ["GITHUB_TOKEN"]
     
-    with open(filename, "r") as f:
-        f.write(value)
-    
     encoded = base64.b64encode(value.encode()).decode()
     
     url = f"https://api.github.com/repos/{username}/{repository}/contents/{filename}"
@@ -33,7 +30,7 @@ def github_push(filename: str = "email.json", value: str =  '{"email": "raymondb
     }
     
     response = httpx.get(url, headers=headers)
-    sha = response.json()["sha"]
+    sha = response.json().get("sha", None)
     
     data = {
         "message": "Ran function github_push",
