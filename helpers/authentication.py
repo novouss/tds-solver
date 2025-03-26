@@ -40,7 +40,7 @@ def generate_embeddings(text: str) -> List[float]:
     embeddings = response.data[0].embedding
     return embeddings
 
-def ask_tools(prompt: str, tools: list[Dict[str, Any]]):
+def ask_tools(prompt: str, tools: List[Dict[str, Any]]):
     response = client.chat.completions.create(
         model = model,
         messages = [
@@ -49,7 +49,7 @@ def ask_tools(prompt: str, tools: list[Dict[str, Any]]):
         functions = tools,
         function_call = "auto"
     )
-    return response.choices[0].message.function_call
+    return response.choices[0].message.function_call.to_json()
 
 def create_properties(desc, datatype: str) -> Dict[str, Any]:
     types = {

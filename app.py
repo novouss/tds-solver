@@ -4,6 +4,7 @@ from fastapi.responses import JSONResponse
 from fastapi import Form, File
 
 import os
+import json
 import chromadb
 from typing import Optional
 
@@ -52,17 +53,17 @@ async def run(question: str = Form(...), file: Optional[UploadFile] = File(None)
     name = answering["documents"][0][0]
     function_call = auth.create_function_call(name, docstring)
 
-    # response = auth.ask_tools(question, function_call)
+    response = auth.ask_tools(question, function_call)
     # answer = respones.choices[0].message.content
-    
+
     answer = {
         "question": question,
         "name": name,
         "function_call": function_call,
-        # "response": response
+        "response": json.loads(response)
         # "answer": answering,
         # "file_name": file.filename,
         # "file_location": filepath,
     }
     
-    return JSONResponse(content={ "answer": answer })
+    return JSONResponse( content={ "answer": answer })
