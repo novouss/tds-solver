@@ -11,7 +11,7 @@ def json_cleanup(path: str) -> str:
     Raises:
         FileNotFoundError: If the specified path does not exist
         json.JSONDecodeError: If the file is not a valid JSON
-s
+
     Example:
         >>> json_cleanup("path/to/file.json")
         '{"Hello": "World", ...}'
