@@ -22,7 +22,7 @@ This section focuses on each task for each graded assignment and their associate
   10. [Multi-cursor edits](./json_cleanup.py)
   11. [CSS Selectors](./css_selectors.py)
   12. [Process files with different encoding](./process_encoding.py)
-  13. [Use GitHub](./github_push.py)
+  13. [Use GitHub](./push_github.py)
   14. [Replace across files](./replace_across.py)
   15. [List files and attributes](./filter_file_attributes.py)
   16. [Move and rename files](./move_rename.py)
@@ -35,7 +35,7 @@ This section focuses on each task for each graded assignment and their associate
   4. [Use Google Colab](./colab_key.py)
   5. [Use an Image Library in Google Colab](./image_lightness.py)
   6. [Deploy a Python API to Vercel](./vercel_api.py) 🚫
-  7. [Create a GitHub Action](./github_action.py)
+  7. [Create a GitHub Action](./action_github.py)
   8. [Push an image to Docker Hub](./docker_hub.py)
   9. [Write a FastAPI server to serve data](./fastapi_server.py)
   10. [Run a local LLM with Llamafile and ngrok](./local_llm.py)
@@ -57,7 +57,7 @@ This section focuses on each task for each graded assignment and their associate
   5. [Find the bounding box of a city](./bounding_box.py)
   6. [Search Hacker News](./hacker_news.py)
   7. [Find newest GitHub User](./newest_github_user.py)
-  8. [Scheduled GitHub Action](./github_actions.py) 💣
+  8. [Scheduled GitHub Action](./action_github.py) 💣
   9. [Extract tables from PDF](./extract_tables.py)
   10. [Convert PDF to Markdown](./pdf_to_markdown.py)
 - Graded Assignment 5
@@ -80,12 +80,12 @@ Some approaches to the assignments didn't have codes or isn't possible given the
 - [1.5. Use Excel](./excel.py) Solve using a Python Formula
 - [1.6. Use DevTools](./chrome_devtools.py) Solve by scraping it
 - [1.11. CSS Selectors](./css_selectors.py) No suggestion was mentioned ~~Solve by scraping it~~
-- [1.13. Use GitHub](./github_push.py) Solve by using GitHub API
+- [1.13. Use GitHub](./push_github.py) Solve by using GitHub API
 - [2.2. Compress an image](./compress_image.py) Returns Base64 encoded data URI beginning with "data:image/..."
 - [2.3. Hosting Portfolios in Github](./host_portfolio.py) Solve by using GitHub API
 - [2.4. Use Google Colab](./colab_key.py) You can reverse engineer the output ~~Fake the Google Colab response~~
 - [2.5. Use an Image Library in Google Colab](./image_lightness.py) Fake the Google Colab response
 - [2.6. Deploy a Python API to Vercel](./vercel_api.py) Let an LLM write and deploy using the Vercel API 🚫
-- [2.7. Create a GitHub Action](./github_action.py) Solve by using GitHub API
+- [2.7. Create a GitHub Action](./action_github.py) Solve by using GitHub API
 - [2.8. Push an image to Docker Hub](./docker_hub.py) Solve by using Docker Hub API
 - [2.10. Run a local LLM with Llamafile and ngrok](./local_llm.py) Run Llamafile in ngrok

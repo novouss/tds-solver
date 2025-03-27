@@ -14,7 +14,6 @@ from submissions.excel import excel
 from submissions.extract_tables import extract_tables
 from submissions.filter_file_attributes import filter_file_attributes
 from submissions.function_calling import function_calling
-from submissions.github_push import github_push
 from submissions.google_sheets import google_sheets
 from submissions.hacker_news import hacker_news
 from submissions.host_portfolio import host_portfolio
@@ -34,6 +33,7 @@ from submissions.npx_prettier import npx_prettier
 from submissions.parse_sales_data import parse_sales_data
 from submissions.pdf_to_markdown import pdf_to_markdown
 from submissions.prompt_engineering import prompt_engineering
+from submissions.push_github import push_github
 from submissions.replace_across import replace_across
 from submissions.request_downloads import request_downloads
 from submissions.sentiment_analysis import sentiment_analysis
@@ -62,7 +62,6 @@ tasks = {
     "extract_tables": extract_tables,
     "filter_file_attributes": filter_file_attributes,
     "function_calling": function_calling,
-    "github_push": github_push,
     "google_sheets": google_sheets,
     "hacker_news": hacker_news,
     "host_portfolio": host_portfolio,
@@ -82,6 +81,7 @@ tasks = {
     "parse_sales_data": parse_sales_data,
     "pdf_to_markdown": pdf_to_markdown,
     "prompt_engineering": prompt_engineering,
+    "github_push": push_github,
     "replace_across": replace_across,
     "request_downloads": request_downloads,
     "sentiment_analysis": sentiment_analysis,

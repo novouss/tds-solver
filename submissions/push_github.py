@@ -1,5 +1,5 @@
 
-def github_push(filename: str = "email.json", value: str =  '{"email": "raymondbrian.gorospe@straive.com"}' ) -> str:
+def push_github(filename: str = "email.json", value: str =  '{"email": "raymondbrian.gorospe@straive.com"}' ) -> str:
     """ Pushes a file to a GitHub Repository
     
     Args:
@@ -10,7 +10,7 @@ def github_push(filename: str = "email.json", value: str =  '{"email": "raymondb
         str: The raw GitHub URL of the filename.
     
     Example:
-        >>> github_push("email.json", "raymondbrian.gorospe@straive.com")
+        >>> github_push("email.json", '{"email": "raymondbrian.gorospe@straive.com"}')
         'https://raw.githubusercontent.com/novouss/tds-solver/main/email.json'
     """
     # This code is extremely insecure, any content placed in value can easily include a command injection.
