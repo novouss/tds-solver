@@ -1,5 +1,6 @@
 from fastapi.responses import JSONResponse, HTMLResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from fastapi import FastAPI, UploadFile, status 
 from fastapi import Form, File
@@ -21,6 +22,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 DATA_PATH = "./data"
 
@@ -61,18 +64,20 @@ async def run(question: str = Form(...), file: Optional[UploadFile] = File(None)
     function_call = auth.create_function_call(name, docstring)
 
     response = auth.ask_tools(question, function_call)
-    arguments = json.loads(response.function_call.arguments)
-    # answer = subs.tasks[name](arguments)
+    response = json.loads(response)
+    
+    arguments = json.loads(response["arguments"])
+    answer = subs.tasks[name](**arguments)
 
-    result = {
-        "question": question,
-        "function_called": name,
+    # result = {
+        # "question": question,
+        # "function_called": name,
         # "function_call": function_call,
-        "arguments": arguments,
-        "response": json.loads(response),
+        # "arguments": arguments,
+        # "response": json.loads(response),
         # "answer": answer,
         # "file_name": file.filename,
         # "file_location": filepath,
-    }
+    # }
     
-    return JSONResponse(content={ "answer": result })
+    return JSONResponse(content={ "answer": answer })
