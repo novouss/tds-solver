@@ -1507,6 +1507,7 @@ dependencies = [
     { name = "pydf" },
     { name = "python-multipart" },
     { name = "tiktoken" },
+    { name = "uvicorn" },
     { name = "yt-dlp" },
 ]
 
@@ -1525,6 +1526,7 @@ requires-dist = [
     { name = "pydf", specifier = ">=12" },
     { name = "python-multipart", specifier = ">=0.0.20" },
     { name = "tiktoken", specifier = ">=0.9.0" },
+    { name = "uvicorn", specifier = ">=0.34.0" },
     { name = "yt-dlp", specifier = ">=2025.2.19" },
 ]
 
