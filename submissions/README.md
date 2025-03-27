@@ -74,7 +74,7 @@ This section focuses on each task for each graded assignment and their associate
 
 ## Notes
 
-Some approaches to the assignments didn't have codes or isn't possible given the context to the assignment. This section serves as a summary of each assignment and the "suggested" approach by the procters.
+Some approaches to the assignments didn't have codes or isn't possible given the context to the assignment. This section serves as a summary of each assignment and the "suggested" approach by the proctors.
 
 - [1.4. Use Google Sheets](./google_sheets.py) Solve using a Python Formula
 - [1.5. Use Excel](./excel.py) Solve using a Python Formula
