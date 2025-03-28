@@ -1,0 +1,12 @@
+name: My Action  
+on: [push]  
+jobs:  
+  build:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout code  
+        uses: actions/checkout@v2  
+      - name: Send notification to raymondbrian.gorospe@straive.com  
+        run: echo "Notification sent to my email."  
+      - name: Build project  
+        run: echo "Building the project..."  
