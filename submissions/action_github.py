@@ -1,9 +1,9 @@
 
 def action_github(task: str) -> str:
-    """ Creates and executes a GitHub action by pushing generated YAML code to the repository.
+    """ Creates a GitHub Action Workflow by generating YAML code and pushing to the repository.
 
     Args: 
-        task (str): A description of the task for which the GitHub action is to be created.
+        task (str): A description of the task for the GitHub Actions Workflow.
 
     Returns: 
         str: The URL of the GitHub repository where the action has been pushed.
@@ -19,7 +19,6 @@ def action_github(task: str) -> str:
     Your name is tds-solver.
     Simplify creating Github Actions.
     Only provide .yml code as answers, skip Markdown formatting.
-    Given the user's task, write code to push to GitHub.
     Include the name of the file in the first line.
     Include the code in the second line and onwards.
     """

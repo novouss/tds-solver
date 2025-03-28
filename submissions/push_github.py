@@ -1,5 +1,5 @@
 
-def push_github(filename: str = "email.json", value: str =  '{"email": "raymondbrian.gorospe@straive.com"}' ) -> str:
+def push_github(filename: str = "email.json", value: str =  '{"email": "raymondbrian.gorospe@straive.com"}') -> str:
     """ Pushes a file to a GitHub Repository
     
     Args:
@@ -13,7 +13,6 @@ def push_github(filename: str = "email.json", value: str =  '{"email": "raymondb
         >>> github_push("email.json", '{"email": "raymondbrian.gorospe@straive.com"}')
         'https://raw.githubusercontent.com/novouss/tds-solver/main/email.json'
     """
-    # This code is extremely insecure, any content placed in value can easily include a command injection.
     import os
     import httpx
     import base64
@@ -26,7 +25,8 @@ def push_github(filename: str = "email.json", value: str =  '{"email": "raymondb
     url = f"https://api.github.com/repos/{username}/{repository}/contents/{filename}"
     
     headers = {
-        "Authorization": f"token {token}"
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github+json" 
     }
     
     response = httpx.get(url, headers=headers)

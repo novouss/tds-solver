@@ -1,3 +1,4 @@
+from submissions.action_github import action_github
 from submissions.bbc_weather import bbc_weather
 from submissions.bounding_box import bounding_box
 from submissions.chrome_devtools import chrome_devtools
@@ -36,6 +37,7 @@ from submissions.prompt_engineering import prompt_engineering
 from submissions.push_github import push_github
 from submissions.replace_across import replace_across
 from submissions.request_downloads import request_downloads
+from submissions.scheduled_action import scheduled_action
 from submissions.sentiment_analysis import sentiment_analysis
 from submissions.sort_json_values import sort_json_values
 from submissions.ticket_sales import ticket_sales
@@ -46,6 +48,7 @@ from submissions.wikipedia_outline import wikipedia_outline
 from submissions.yt_transcribe import yt_transcribe
 
 tasks = {
+    "action_github": action_github,
     "bbc_weather": bbc_weather,
     "bounding_box": bounding_box,
     "colab_key": colab_key,
@@ -84,6 +87,7 @@ tasks = {
     "github_push": push_github,
     "replace_across": replace_across,
     "request_downloads": request_downloads,
+    "scheduled_action": scheduled_action,
     "sentiment_analysis": sentiment_analysis,
     "sort_json_values": sort_json_values,
     "ticket_sales": ticket_sales,

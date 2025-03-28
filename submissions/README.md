@@ -57,7 +57,7 @@ This section focuses on each task for each graded assignment and their associate
   5. [Find the bounding box of a city](./bounding_box.py)
   6. [Search Hacker News](./hacker_news.py)
   7. [Find newest GitHub User](./newest_github_user.py)
-  8. [Scheduled GitHub Action](./action_github.py) 💣
+  8. [Scheduled GitHub Action](./scheduled_action.py) 💣
   9. [Extract tables from PDF](./extract_tables.py)
   10. [Convert PDF to Markdown](./pdf_to_markdown.py)
 - Graded Assignment 5
